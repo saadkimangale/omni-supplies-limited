@@ -1,0 +1,150 @@
+/* Industries.css - Ultra Clean Minimal Version */
+
+.industries {
+  padding: 3.5rem 2rem;
+  background: #ffffff;
+  text-align: center;
+}
+
+.industries h2 {
+  font-size: 2rem;
+  font-weight: 500;
+  color: #1e293b;
+  margin-bottom: 0.5rem;
+}
+
+.industries h2::after {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 2px;
+  background: #ff9800;
+  margin: 0.75rem auto 0;
+}
+
+.industries .subtitle {
+  font-size: 0.95rem;
+  color: #64748b;
+  max-width: 550px;
+  margin: 1.5rem auto 2.5rem;
+  line-height: 1.5;
+}
+
+.industry-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.industry-card {
+  background: #ffffff;
+  padding: 1.5rem 1rem;
+  border-radius: 8px;
+  transition: all 0.2s;
+  border: 1px solid #f1f5f9;
+  text-align: center;
+}
+
+.industry-card:hover {
+  border-color: #ff9800;
+  background: #fffaf5;
+}
+
+.industry-icon {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  margin: 0 auto 0.75rem;
+  color: #ff9800;
+  background: #fff1e0;
+  border-radius: 50%;
+}
+
+.industry-card:nth-child(2) .industry-icon {
+  color: #2196f3;
+  background: #e8f0fe;
+}
+
+.industry-card:nth-child(3) .industry-icon {
+  color: #4caf50;
+  background: #e8f5e9;
+}
+
+.industry-card:nth-child(4) .industry-icon {
+  color: #9c27b0;
+  background: #f3e5f5;
+}
+
+.industry-card h3 {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+  color: #334155;
+}
+
+.industry-card p {
+  color: #64748b;
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
+.industry-cta {
+  margin-top: 2.5rem;
+}
+
+.industry-cta .btn {
+  display: inline-block;
+  padding: 0.6rem 1.5rem;
+  background: #ff9800;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: background 0.2s;
+  border: none;
+}
+
+.industry-cta .btn:hover {
+  background: #f57c00;
+}
+
+.industry-cta .btn-secondary {
+  background: transparent;
+  border: 1px solid #e2e8f0;
+  color: #475569;
+  margin-left: 0.75rem;
+}
+
+.industry-cta .btn-secondary:hover {
+  background: #f8fafc;
+  border-color: #ff9800;
+  color: #ff9800;
+}
+
+@media (max-width: 768px) {
+  .industry-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  
+  .industries {
+    padding: 2.5rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .industry-grid {
+    grid-template-columns: 1fr;
+    max-width: 300px;
+  }
+  
+  .industry-cta .btn-secondary {
+    margin-left: 0;
+    margin-top: 0.5rem;
+  }
+}

@@ -1,0 +1,378 @@
+/* NewCtaSection.css - Different class names to avoid conflicts */
+
+.contact-trigger {
+  padding: 5rem 2rem;
+  background: linear-gradient(135deg, #0a0c14 0%, #151a24 100%);
+  color: white;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid rgba(255, 152, 0, 0.2);
+  border-bottom: 1px solid rgba(255, 152, 0, 0.2);
+}
+
+/* Industrial pattern background */
+.contact-trigger::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(45deg, rgba(255, 152, 0, 0.02) 25%, transparent 25%),
+    linear-gradient(-45deg, rgba(255, 152, 0, 0.02) 25%, transparent 25%);
+  background-size: 60px 60px;
+  z-index: 1;
+}
+
+/* Diagonal accent line */
+.contact-trigger::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, 
+    transparent, 
+    #ff9800, 
+    #ff5722, 
+    #3498db, 
+    transparent
+  );
+  z-index: 2;
+}
+
+.contact-trigger > * {
+  position: relative;
+  z-index: 3;
+}
+
+/* Content wrapper */
+.contact-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* Industry badges */
+.industry-badge-row {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.industry-badge {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 0.6rem 1.5rem;
+  border-radius: 40px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  border: 1px solid rgba(255, 152, 0, 0.3);
+  color: #ff9800;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.industry-badge i {
+  font-size: 1rem;
+}
+
+.industry-badge:nth-child(2) {
+  border-color: rgba(52, 152, 219, 0.3);
+  color: #3498db;
+}
+
+.industry-badge:nth-child(3) {
+  border-color: rgba(39, 174, 96, 0.3);
+  color: #27ae60;
+}
+
+/* Headline */
+.contact-headline {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  line-height: 1.3;
+  margin: 0.5rem 0;
+  max-width: 700px;
+}
+
+.contact-headline strong {
+  color: #ff9800;
+  font-weight: 800;
+  position: relative;
+  display: inline-block;
+}
+
+.contact-headline strong::after {
+  content: '';
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background: rgba(255, 152, 0, 0.2);
+  z-index: -1;
+}
+
+/* Description */
+.contact-description {
+  font-size: 1.2rem;
+  color: #b0b0b0;
+  max-width: 600px;
+  margin: 0 auto 1rem;
+  line-height: 1.6;
+  font-weight: 300;
+}
+
+/* Stats row */
+.quick-stats {
+  display: flex;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 1.5rem 0;
+}
+
+.stat-pill {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  background: rgba(255, 255, 255, 0.02);
+  padding: 0.8rem 1.5rem;
+  border-radius: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.stat-pill-number {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #ff9800;
+  line-height: 1;
+}
+
+.stat-pill-label {
+  font-size: 0.9rem;
+  color: #ccc;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Action buttons - DIFFERENT NAMES from hero */
+.action-group {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 2rem 0 1rem;
+}
+
+.action-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  padding: 1rem 2.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 8px; /* Different shape - square instead of pill */
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  min-width: 200px;
+  border: none;
+  cursor: pointer;
+}
+
+.action-link-main {
+  background: #ff9800;
+  color: #0a0c14;
+  border: 2px solid #ff9800;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.action-link-main::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #0a0c14;
+  transition: width 0.3s ease;
+  z-index: -1;
+}
+
+.action-link-main:hover::before {
+  width: 100%;
+}
+
+.action-link-main:hover {
+  color: #ff9800;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(255, 152, 0, 0.3);
+}
+
+.action-link-alt {
+  background: transparent;
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.action-link-alt::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 152, 0, 0.2);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.3s ease, height 0.3s ease;
+  z-index: -1;
+}
+
+.action-link-alt:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+.action-link-alt:hover {
+  border-color: #ff9800;
+  transform: translateY(-3px);
+}
+
+/* Contact options grid - NEW element not in hero */
+.contact-options-grid {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.contact-option-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 2rem;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  color: white;
+  min-width: 200px;
+  border: 1px solid transparent;
+}
+
+.contact-option-card:hover {
+  background: rgba(255, 152, 0, 0.05);
+  border-color: rgba(255, 152, 0, 0.3);
+  transform: translateY(-3px);
+}
+
+.option-icon {
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 152, 0, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ff9800;
+  font-size: 1.2rem;
+}
+
+.option-text {
+  text-align: left;
+}
+
+.option-text .label {
+  font-size: 0.8rem;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.option-text .value {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-trigger {
+    padding: 4rem 1rem;
+  }
+  
+  .quick-stats {
+    gap: 1rem;
+  }
+  
+  .stat-pill {
+    width: calc(50% - 0.5rem);
+    justify-content: center;
+  }
+  
+  .action-group {
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .action-link {
+    width: 100%;
+  }
+  
+  .contact-options-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .contact-option-card {
+    width: 100%;
+    max-width: 280px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-headline {
+    font-size: 1.8rem;
+  }
+  
+  .contact-description {
+    font-size: 1rem;
+  }
+  
+  .stat-pill {
+    width: 100%;
+  }
+  
+  .industry-badge-row {
+    gap: 0.5rem;
+  }
+  
+  .industry-badge {
+    padding: 0.4rem 1rem;
+    font-size: 0.8rem;
+  }
+}
